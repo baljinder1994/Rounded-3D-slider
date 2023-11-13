@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      perspective: 1200px;
+    }
+
+    .cylinder-carousel {
+      width: 200px;
+      height: 200px;
+      position: relative;
+      transform-style: preserve-3d;
+      animation: rotateCylinder 5s infinite linear;
+    }
+
+    .cylinder {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transform-style: preserve-3d;
+    }
+
+    .face {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      backface-visibility: hidden;
+      border-radius: 50%;
+      transform-origin: 50% 50%;
+    }
+
+    .face:nth-child(1) {
+      transform: rotateY(0deg) translateZ(100px) rotateX(0deg);
+    }
+
+    .face:nth-child(2) {
+      transform: rotateY(60deg) translateZ(100px) rotateX(0deg);
+    }
+
+    .face:nth-child(3) {
+      transform: rotateY(120deg) translateZ(100px) rotateX(0deg);
+    }
+
+    .face:nth-child(4) {
+      transform: rotateY(180deg) translateZ(100px) rotateX(0deg);
+    }
+
+    .face:nth-child(5) {
+      transform: rotateY(240deg) translateZ(100px) rotateX(0deg);
+    }
+
+    .face:nth-child(6) {
+      transform: rotateY(300deg) translateZ(100px) rotateX(0deg);
+    }
+
+    .face img {
+      width: 80%;
+      height: 80%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    @keyframes rotateCylinder {
+      0%, 100% {
+        transform: rotateY(0deg);
+      }
+      16.666%, 33.333% {
+        transform: rotateY(60deg);
+      }
+      50%, 66.666% {
+        transform: rotateY(120deg);
+      }
+      83.333%, 99.999% {
+        transform: rotateY(180deg);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="cylinder-carousel">
+  <div class="cylinder">
+    <!--Chnge only images source-->
+    <div class="face"><img src="C:\Users\DELL\Desktop/cu.jpg" alt="Image 1"></div>
+    <div class="face"><img src="C:\Users\DELL\Desktop/fl.jpg" alt="Image 2"></div>
+    <div class="face"><img src="C:\Users\DELL\Desktop/fish.jpg" alt="Image 3"></div>
+    <div class="face"><img src="C:\Users\DELL\Desktop/hel.jpg" alt="Image 4"></div>
+    <div class="face"><img src="C:\Users\DELL\Desktop/baby.jpg" alt="Image 5"></div>
+    <div class="face"><img src="C:\Users\DELL\Desktop/baby2.jpg" alt="Image 6"></div>
+  </div>
+</div>
+
+</body>
+</html>
